@@ -27,7 +27,7 @@ export default function CancerAwarenessApp() {
     try {
       setLoading(true);
       const res = await fetch(
-        "https://zenquotes.io/api/quotes|hope|courage"
+        "https://api.quotable.io/quotes/random?tags=inspirational|hope|courage"
       );
       const data = await res.json();
       setQuote(data[0]);
@@ -342,7 +342,7 @@ export default function CancerAwarenessApp() {
                 {[
                   { Icon: Phone, label: "Phone", value: "+91 9898767654", color: "pink" },
                   { Icon: Mail, label: "Email", value: "support@cancerawareness.org", color: "purple" },
-                  { Icon: MapPin, label: "Address", value: "123 Hope Street\nWellness City, Kalyan 421301", color: "pink" },
+                  { Icon: MapPin, label: "Address", value: "123 Hope Street\nWellness City, kalyan 12345", color: "pink" },
                 ].map((info) => (
                   <div key={info.label} className="bg-white rounded-2xl shadow-xl p-8 flex gap-6">
                     <div className={`w-14 h-14 rounded-xl bg-${info.color}-100 flex items-center justify-center`}>
